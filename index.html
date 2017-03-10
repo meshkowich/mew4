@@ -35,7 +35,8 @@
       </div>
     </div>
     </header>
-
+    <div class ="burger-container-space">
+    </div>
     <div class="burger-container">
       <div class="burger">
         <div class="bar1"></div>
@@ -55,7 +56,7 @@
     <article ng-controller="index">
       <div class="container">
         <div class="animals all" ng-repeat="product in products">
-          <img src={{product.image}} alt="pic not found">
+          <img ng-src={{product.image}} alt="pic not found">
           <div class="product-name">{{product.name}} of type {{product.type}} {{product.price | currency}}
           </div>
         </div>    

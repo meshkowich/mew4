@@ -161,7 +161,7 @@ li {
     text-decoration: none;
    // background-color: @light-primary-color;
     transition: 0.5s all;
-    z-index: 10;
+  //  z-index: 10;
   }
 }
 
@@ -195,7 +195,7 @@ li a:hover {
   //overflow: hidden; 
   display: flex;
   flex-direction: column;
-  z-index: 5;
+  z-index: 1;
 }
 .burger-container-scrolled {
   position: fixed;
@@ -207,7 +207,7 @@ li a:hover {
   position: absolute;
   background-color: rgba(148, 169, 47, 0.5);
   top: 4.5rem;
-  z-index: 5;
+  z-index: 1;
   visibility: visible;
   display: flex;
   width: 20rem;
@@ -229,6 +229,7 @@ li a:hover {
 .menu-scrolled {
   position: fixed;
   top: 4.5rem;
+  
 }
 
 
@@ -302,12 +303,10 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .menu {
-    width: 100%;
-    a {
-      font-size: 3rem;
-    }
+  .menu a {
+  font-size: 3rem;
   }
 }
+
   
 

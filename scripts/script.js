@@ -1,20 +1,23 @@
 $(document).ready(function(){
 
-//burger scroll
+//burger and scroll
   
   var  mb = $(".burger-container");
     mn = $(".menu");
     mbs = "burger-container-scrolled";
     mns = "menu-scrolled";
-    hdr = $('header').height();
+    hdr = $('header').height() + 15;
+    contHeight = $(".burger-container").height();
 
 $(window).scroll(function() {
   if( $(this).scrollTop() > hdr ) {
     mb.addClass(mbs);
     mn.addClass(mns);
+    $(".burger-container-space").height(contHeight);
   } else {
     mb.removeClass(mbs);
     mn.removeClass(mns);
+    $(".burger-container-space").height(0);
   }
 });  
   
@@ -43,6 +46,18 @@ $(window).scroll(function() {
       }
     }
   });
-    
+
+// menu adjustment to fit in wrapper  
+w = 0;
+if($(window).width() < 480) 
+{    
+w = $(".content-wrapper").width();
+console.log(w);
+$(".menu").width(w);
+$(".menu-scrolled").width(w);
+} else {
+console.log("screen is wider that 480");
+}
+  
 });
   
