@@ -29,12 +29,13 @@ $(window).scroll(function() {
   
   $(".burger").on('click', function(){
       $('.menu').toggleClass("closed");
-      $('.aside-left').toggleClass("closed");
+//      $('.aside-left').toggleClass("closed");
   });
   
-//  smooth scroll
+//  menu close and smooth scroll 
   
   $('a[href*="#"]:not([href="#"])').click(function() {
+    $('.menu').toggleClass("closed");
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -56,7 +57,7 @@ console.log(w);
 $(".menu").width(w);
 $(".menu-scrolled").width(w);
 } else {
-console.log("screen is wider that 480");
+console.log("screen is wider than 480");
 }
   
 });
