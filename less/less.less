@@ -1,0 +1,313 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*^^^^^^ reset ^^^^^^^^*/
+
+/* colors */
+@dark-primary-color: #5D4037;
+@primary-color: #fbf18e;
+@light-primary-color: #D7CCC8;
+@text-icons: #fff;
+@accent-color: #8BC34A;
+@primary-text: #212121;
+@secondary-text: #757575;
+@divider-color: #BDBDBD;
+
+/* main wrapper */
+
+.main-wrapper {
+  padding: 1em;
+  background-image: url(../img/kot.jpg); 
+  background-opacity: 0.4;
+}
+
+.content-wrapper {
+  background-position: -20px -20px;
+  background-color: @primary-color;
+  overflow: hidden;
+  position: relative;
+}
+
+/* header */
+header {
+  z-index: 1;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-shadow: 5px 5px 5px @light-primary-color;
+    //background-color: @primary-color;
+  }
+
+  .logo-container { 
+    position: relative;
+    //padding-left: 500px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 5em;
+    height: 50px;
+    //border: 1px solid grey;
+
+    .logo { 
+      width: 50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      animation-name: logo;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .shadow { 
+      background-color: @light-primary-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 5px;
+      border-radius: 100%;
+      animation-name: shadow;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  }
+}
+}
+
+@keyframes shadow {
+  from {width: 30px; height: 8px;}
+  to {width: 35px; height: 10px;}
+}
+
+@keyframes logo {
+  from {padding-top: 0px;}
+  to {padding-top: 5px;}
+}
+
+.burger {
+  overflow: hidden;
+  padding: 10px 0 0 10px; 
+  .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+  }  
+}
+
+ul {
+  list-style-type: none;
+} 
+
+li { 
+  a {     
+    width: 100%;
+    display: inline-block;
+    color: @text-icons; 
+    text-align: left;
+    padding: 12px 10px;
+    
+    text-decoration: none;
+   // background-color: @light-primary-color;
+    transition: 0.5s all;
+    z-index: 10;
+  }
+}
+
+li a:hover {
+  background-color: @accent-color;
+  padding-left: 20px;
+}
+
+
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 { //space because bar div is under 
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* menu */
+.burger-container {
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+.burger-container-scrolled {
+  position: fixed;
+  top: 0;
+}
+
+.menu {
+  overflow: hidden;
+  position: absolute;
+  background-color: rgba(148, 169, 47, 0.5);
+  top: 10rem;
+  z-index: 5;
+  visibility: visible;
+  display: flex;
+  width: 30%;
+  //height: 50%;
+  //flex-direction: column;
+  //align-items: stretch;
+  opacity: 1;
+  transition: opacity 3s, visibility 3s;
+  ul {
+    position: relative;
+  }
+}
+
+.menu.closed { 
+  opacity: 0;
+  visibility: hidden;
+  }
+
+.menu-scrolled {
+  position: fixed;
+  top: 4.5rem;
+  z-index: 10;
+}
+
+
+/*article*/
+//.animals.all.ng-scope {
+//  z-index: 0;
+//}
+
+.space {
+  padding-bottom: 10rem;
+}
+
+article {
+  .container {
+    padding: 0 10rem 0 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .animals {
+    min-width: 200px;
+    padding: 20px;
+    transform: scale(1, 1);
+    transition: transform 1s;
+    
+    &*:hover {
+        transform: scale(1.1, 1.1);
+        transition: transform 1s;
+      }
+    
+    img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    .product-name {
+      max-width: 200px;
+      text-align: center;
+      color: black;
+      background-color: @primary-color;
+    }
+  }
+}
+
+.last-div {
+  display: flex;
+  justify-content: space-around; 
+  &:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 1s;
+  }
+}
+
+/*footer*/
+footer {
+  background-color: @primary-color;
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: @primary-color;
+  }
+  .fa {
+    padding: 10px 5px;
+  }
+    
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100%;
+    a {
+      font-size: 3rem;
+    }
+  }
+}
+  
+
