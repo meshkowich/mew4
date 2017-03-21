@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app="root">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEW 4</title>
+  <script src="scripts/jquery-1.12.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/less.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+  <!--<![endif]-->
+  <script src="scripts/script.js" type="text/javascript"></script>
+  <script src="scripts/root.js" type="text/javascript"></script>
+  <!--<script src="https://use.fontawesome.com/71e97f7c56.js"></script>-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body> 
+
+<div class="main-wrapper">
+  <div class="content-wrapper">
+    
+    <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src="img/logo.png" class="logo">
+        <div class="shadow">
+        </div>
+      </div>
+    </div>
+    </header>
+    <div class ="burger-container-space">
+    </div>
+    <div class="burger-container">
+      <div class="burger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="menu closed">
+          <ul>
+            <li><a href="index.html#products">products</a></li>
+            <li><a href="index.html#contact"> contact</a></li>
+            <li><a href="index.html#last-div">pies</a></li>
+          </ul>
+      </div>      
+    </div>
+
+    <article ng-controller="index">
+      <div class="single-product">
+      
+        <div class="cart">
+          
+          <h1>Your are buying this</h1>
+          <img src="img/a.jpg">
+          <div class="color">COLOR</div>
+          <div class="description"><p>Here goes product description. Like this and that and all of that stuff. Like, you know, info, data, knowledge.</p></div>
+          
+          <div class="button">
+            <a href="#">BUY</a>
+          </div>
+          
+
+        </div>
+
+
+
+
+      
+      
+      
+      </div>
+    </article>
+
+    <footer>
+      <div class="container">
+        <div class="kotik">
+          <i class="fa fa-youtube fa-4x" aria-hidden="true"></i>
+          <p><i class="fa fa-creative-commons" aria-hidden="true"></i> You are smart and funny and everything's going to be okay.</p>
+          
+        </div>
+      </div>
+    </footer> 
+
+  </div>
+</div>
+</body>
+</html>

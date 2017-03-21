@@ -10,7 +10,8 @@ angular.module('root', [])
         {id: 1, name: "Fox", type: "fire", price: 10, image: "img/fox.svg"},
         {id: 2, name: "Racoon", type: "soil", price: 10, image: "img/racoon.svg"},
         {id: 3, name: "Owl", type: "wind", price: 10, image: "img/owl.svg"},
-        {id: 4, name: "Golf club", type: "wind", price: 10, image: "img/kot.jpg"}
+        {id: 4, name: "Golf club", type: "wind", price: 10, image: "img/kot.jpg"},
+        {id: 5, name: "Kotak", type: "salt", price: 10, image: ["img/product.png", "img/a.jpg", "img/b.jpg"]}
 
     ];
       
