@@ -47,9 +47,9 @@
     <article ng-controller="index" id="products">
       <div class="container">
         <div class="animals all" ng-repeat="product in products">
-          <img ng-src={{product.image}} alt="product image">
+          <a href="product.html"><img ng-src={{product.image}} alt="product image">
           <div class="product-name">{{product.name}} of type {{product.type}} {{product.price | currency}}
-          </div>
+          </div></a>
         </div>    
       </div>
       
